@@ -1,0 +1,123 @@
+body {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-family: helvetica, arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+img,
+picture,
+video,
+embed {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1128px;
+    margin: 0 auto;
+}
+
+.cortopo {
+	background-color: #262626;/*#C75B3A*/
+	margin-top: -15px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+/*.header {
+    width: 100%;
+    height: 48px;
+    margin-top: 3.6em;
+    margin-bottom: 3.6em;
+}*/
+
+.logo {
+    float: left;
+    width: 20.744680851064%; /*234px / 1128px */ 
+    text-decoration: none;
+    color: #fff; 
+    margin-top: -23px;
+    font-size: 33px;
+}
+
+.menu {
+	width: 74.468085106383%; /*840px / 1128px */
+    float: right;
+}
+
+.menu ul {
+    float: right;
+    margin-top: -20px;
+}
+
+.menu li {
+    font-size: 1.2em;
+    margin-left: 2em;
+    margin-top: -3px;
+    display: inline-block;
+    list-style-type: none;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.textb {
+	font-size: 17px;
+	width: 165px;
+}
+
+.textcad {
+	font-size: 30px;
+	margin-bottom: 10px;
+    border: thin solid #ccc;
+    padding: 5px;
+}
+
+.textcaddate {
+	font-size: 30px;
+	width: 375px;
+	margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.cadastro {
+	padding-top: 75px;
+	float: none;
+    width: 50%;
+    /*text-align: center;*/
+    color: #000;
+    width: 20.744680851064%; /*234px / 1128px */
+}
+
+.tam {
+	max-width: 1128px;
+	margin: 0 auto;
+}
+
+.botcad {
+	font-size: 23px;
+	background-color: #fff;
+    cursor: pointer;
+}
+
+.botlog {
+	font-size: 16px;
+	background-color: #fff;
+    cursor: pointer;
+}
+
+.caixa {
+    margin-top: -12px;
+    color: #fff;
+    margin-left: -4px;
+    font-size: 15px;
+
+}
+
+#check {
+    zoom:1.1;
+}
