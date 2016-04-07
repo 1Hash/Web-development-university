@@ -1,8 +1,5 @@
 <?php
 error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
-# FileName="Connection_php_mysql.html"
-# Type="MYSQL"
-# HTTP="true"
 $hostname_testelogin = "localhost";
 $database_testelogin = "testelogin";
 $username_testelogin = "root";
