@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Ajuda - ELentes</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Plugins -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+    <link href="css/style.teal.flat.css" rel="stylesheet" id="theme">
+  </head>
+  <body class="fade-down">
+
+    <!-- Top Header -->
+    <div class="top-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="list-inline pull-right">
+              <li class="hidden-xs"><a href="ajuda.html"><i class="fa fa-question-circle"></i> Ajuda</a></li>
+              <li class="hidden-xs"><a href="#"><i class="fa fa-phone"></i>  +55 (41) 3223-0749</a></li>
+              <li class="hidden-xs"><a href="#"><i class="fa fa-truck"></i> Consultar Frete</a></li>
+              <li>
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownLogin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <i class="fa fa-user"></i> Entrar <span class="caret"></span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-login" aria-labelledby="dropdownLogin">
+                    <form>
+                      <div class="form-group">
+                        <label for="username">E-mail ou CPF</label>
+                        <input type="text" class="form-control" id="username" placeholder="E-mail ou CPF">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" class="form-control" id="password" placeholder="Senha">
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"><span> Lembre-me</span>
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-default btn-sm"><i class="fa fa-long-arrow-right"></i> Entrar</button>
+                      <a class="btn btn-default btn-sm pull-right" href="registrar.html" role="button">Cadastrar-se</a>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Top Header -->
+
+    <!-- Middle Header -->
+    <div class="middle-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 logo">
+            <a href="index.php"><img alt="Logo" src="images/logo-teal.png" class="img-responsive" data-text-logo="ELentes-logo" /></a>
+          </div>
+          <div class="col-sm-8 col-md-6 search-box m-t-2">
+            <div class="input-group">
+              <input type="text" class="form-control search-input" aria-label="Busque aqui..." placeholder="Busque aqui...">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default btn-search"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-3 cart-btn hidden-xs m-t-2">
+            <a href="" class="btn btn-theme dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-shopping-cart"></i> 4 <span class="caret"></span></a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-cart">
+              <div class="media">
+                <div class="media-left">
+                  <a href="detalhes.html"><img class="media-object img-thumbnail" src="images/demo/p1-small-1.jpg" width="50" alt="product"></a>
+                </div>
+                <div class="media-body">
+                  <a href="detalhes.html" class="media-heading">WranglerGrey Printed Slim Fit Round Neck T-Shirt</a>
+                  <div>x 1 $13.50</div>
+                </div>
+                <div class="media-right"><a href="#" data-toggle="tooltip" title="Remove"><i class="fa fa-remove"></i></a></div>
+              </div>
+              <div class="media">
+                <div class="media-left">
+                  <a href="detalhes.html"><img class="media-object img-thumbnail" src="images/demo/p2-small-1.jpg" width="50" alt="product"></a>
+                </div>
+                <div class="media-body">
+                  <a href="detalhes.html" class="media-heading">CelioKhaki Printed Round Neck T-Shirt</a>
+                  <div>x 1 $13.50</div>
+                </div>
+                <div class="media-right"><a href="#" data-toggle="tooltip" title="Remove"><i class="fa fa-remove"></i></a></div>
+              </div>
+              <div class="media">
+                <div class="media-left">
+                  <a href="detalhes.html"><img class="media-object img-thumbnail" src="images/demo/p3-small-1.jpg" width="50" alt="product"></a>
+                </div>
+                <div class="media-body">
+                  <a href="detalhes.html" class="media-heading">CelioOff White Printed Round Neck T-Shirt</a>
+                  <div>x 1 $13.50</div>
+                </div>
+                <div class="media-right"><a href="#" data-toggle="tooltip" title="Remove"><i class="fa fa-remove"></i></a></div>
+              </div>
+              <div class="media">
+                <div class="media-left">
+                  <a href="detalhes.html"><img class="media-object img-thumbnail" src="images/demo/p4-small-1.jpg" width="50" alt="product"></a>
+                </div>
+                <div class="media-body">
+                  <a href="detalhes.html" class="media-heading">Levi'sNavy Blue Printed Round Neck T-Shirt</a>
+                  <div>x 1 $13.50</div>
+                </div>
+                <div class="media-right"><a href="#" data-toggle="tooltip" title="Remove"><i class="fa fa-remove"></i></a></div>
+              </div>
+              <div class="subtotal-cart">Total: <span>$54.00</span></div>
+              <div class="text-center">
+                  <div class="btn-group" role="group" aria-label="View Cart and Checkout Button">
+                    <a href="carrinho.html" class="btn btn-default btn-sm" type="button"><i class="fa fa-shopping-cart"></i> Ver Carrinho</a>
+                    <a href="confirmar-compra.html" class="btn btn-default btn-sm" type="button"><i class="fa fa-check"></i> Finalizar</a>
+                  </div>
+              </div>
+            </div>
+            <a href="favoritos.html" class="btn btn-theme" data-toggle="tooltip" title="Favoritos" data-placement="bottom"><i class="fa fa-heart"></i>3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Middle Header -->
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default shadow-navbar" role="navigation">
+      <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="carrinho.html" class="btn btn-default btn-cart-xs visible-xs pull-right">
+              <i class="fa fa-shopping-cart"></i> Carrinho : 4
+            </a>
+            <a href="favoritos.html" class="btn btn-default btn-cart-xs visible-xs pull-right">
+              <i class="fa fa-heart"></i> Favoritos : 3
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.php">Home</a></li>
+              <li><a href="produtos.html">Produtos</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="dicas.html">Dicas</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+    <!-- End Navigation Bar -->
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumb-container">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li class="active">Ajuda</li>
+        </ol>
+      </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Main Content -->
+    <div class="container m-t-3">
+      <div class="row">
+
+        <div class="col-sm-3">
+          <h4><i class="fa fa-shopping-cart"></i> Shopping</h4>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel-group faq-panel" id="accordion1" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading1">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collaps1" aria-expanded="true" aria-controls="collaps1">
+                    I see different prices with the same title. Why?
+                  </a>
+                </h4>
+              </div>
+              <div id="collaps1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading2">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    Why do I see different prices for the same product?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident blanditiis ipsa expedita, earum esse omnis delectus possimus fugit perferendis ex veritatis veniam consequuntur mollitia, facilis vel velit voluptatem eos ut!
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading3">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                  Is it necessary to have an account to shop on Marketshop?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, quisquam, corrupti. Perspiciatis maxime provident in vero dolore similique quam voluptatum eum reiciendis ex repellat a saepe, explicabo odit quae perferendis!
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading4">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  What do I need to know before getting an order gift wrapped?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab perferendis, similique a accusamus ipsum incidunt repellendus quis, soluta, minus molestiae illum eligendi id hic eum accusantium voluptatem quae facilis architecto.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading5">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                  What is Advantage?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <h4><i class="fa fa-money"></i> Payments</h4>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel-group faq-panel" id="accordion2" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading6">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                    How do I pay for a purchase?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading7">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                    Are there any hidden charges (Octroi or Sales Tax) when I make a purchase?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident blanditiis ipsa expedita, earum esse omnis delectus possimus fugit perferendis ex veritatis veniam consequuntur mollitia, facilis vel velit voluptatem eos ut!
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading8">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                  What is Cash on Delivery?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, quisquam, corrupti. Perspiciatis maxime provident in vero dolore similique quam voluptatum eum reiciendis ex repellat a saepe, explicabo odit quae perferendis!
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading9">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                  How do I pay using a credit/debit card?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab perferendis, similique a accusamus ipsum incidunt repellendus quis, soluta, minus molestiae illum eligendi id hic eum accusantium voluptatem quae facilis architecto.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading10">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                  Is it safe to use my credit/debit card on this store?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading11">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                  What is a 3D Secure password?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading12">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                  How can I get the 3D Secure password for my credit/debit card?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading13">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                  Can I use my bank's Internet Banking feature to make a payment?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading14">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                  Can I make a credit/debit card or Internet Banking payment through my mobile?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading14">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading15">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                  How does 'Instant Cashback' work?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading15">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading16">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                  How do I place a Cash on Delivery (COD) order?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading16">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, culpa rem in voluptate inventore repudiandae officia ad eveniet aut reiciendis corrupti, odit, velit officiis voluptatibus, incidunt minima omnis voluptas. Similique.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <h4><i class="fa fa-user"></i> My Account  &amp; My Orders</h4>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel-group faq-panel" id="accordion3" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading17">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapse17" aria-expanded="true" aria-controls="collapse17">
+                    What is 'My Account'? How do I update my information ?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading17">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading18">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapse18" aria-expanded="true" aria-controls="collapse18">
+                    How do I merge my accounts linked to different email ids?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading18">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading19">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapse19" aria-expanded="true" aria-controls="collapse19">
+                    How do I know my order has been confirmed?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading19">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading20">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapse20" aria-expanded="true" aria-controls="collapse20">
+                    Can I order a product that is 'Out of Stock'?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading20">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <h4><i class="fa fa-gift"></i> Gift Voucher</h4>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel-group faq-panel" id="accordion4" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading21">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapse21" aria-expanded="true" aria-controls="collapse21">
+                    How do I buy/gift an e-Gift Voucher?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading21">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading22">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapse22" aria-expanded="true" aria-controls="collapse22">
+                    How do I make a purchase with an e-Gift Voucher?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading22">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading23">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapse23" aria-expanded="true" aria-controls="collapse23">
+                    Does an e-Gift Voucher expire?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading23">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading24">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapse24" aria-expanded="true" aria-controls="collapse24">
+                    Can I use promotional codes with e-Gift Vouchers?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading24">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading25">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapse25" aria-expanded="true" aria-controls="collapse25">
+                    Is there a limit on how many e-Gift vouchers I can use on a single order?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading25">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading26">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapse26" aria-expanded="true" aria-controls="collapse26">
+                    What Terms &amp; Conditions apply to e-Gift Vouchers?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse26" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading26">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <h4><i class="fa fa-shopping-bag"></i> Order Status</h4>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel-group faq-panel" id="accordion5" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading27">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapse27" aria-expanded="true" aria-controls="collapse27">
+                    How do I check the current status of my orders?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse27" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading27">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading28">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapse28" aria-expanded="true" aria-controls="collapse28">
+                    What do the different order status mean?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse28" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading28">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading29">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion5" href="#collapse29" aria-expanded="true" aria-controls="collapse29">
+                    When and how can I cancel an order?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse29" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading29">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <h4><i class="fa fa-truck"></i> Shipping</h4>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel-group faq-panel" id="accordion6" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading30">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapse30" aria-expanded="true" aria-controls="collapse30">
+                    What are the delivery charges?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse30" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading30">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading31">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapse31" aria-expanded="true" aria-controls="collapse31">
+                    Are there any hidden costs (sales tax, octroi etc) on items sold by sellers?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse31" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading31">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading32">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapse32" aria-expanded="true" aria-controls="collapse32">
+                    What is the estimated delivery time?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse32" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading32">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading33">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapse33" aria-expanded="true" aria-controls="collapse33">
+                    Why does the estimated delivery time vary from seller to seller?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse33" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading33">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading34">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapse34" aria-expanded="true" aria-controls="collapse34">
+                    Why does the delivery date not correspond to the delivery timeline mentioned?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse34" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading34">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading35">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapse35" aria-expanded="true" aria-controls="collapse35">
+                    Seller does not/cannot ship to my area. Why?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse35" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading35">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading36">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapse36" aria-expanded="true" aria-controls="collapse36">
+                    I need to return an item, how do I arrange for a pick-up?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse36" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading36">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading37">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapse37" aria-expanded="true" aria-controls="collapse37">
+                    Does deliver internationally?
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse37" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading37">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam unde dicta ab sapiente harum beatae nihil aspernatur nam eos perferendis. Iusto perspiciatis assumenda vitae aspernatur nam est fuga maiores sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="alert alert-info" role="alert">
+            Esse artigo foi útil? <a href="#" class="alert-link">Sim</a> / <a href="suporte.html" class="alert-link">Não, entrar em contato com o suporte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="title-footer"><span>Sobre</span></div>
+            <ul>
+              <li>
+                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremmagna aliqua. Ut enim ad minim... <a href="#">Read More</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="title-footer"><span>Informações</span></div>
+            <ul>
+              <li><i class="fa fa-angle-double-right"></i> <a href="ajuda.html">Ajuda</a></li>
+              <li><i class="fa fa-angle-double-right"></i> <a href="suporte.html">Suporte</a></li>
+            </ul>
+          </div>
+          <div class="clearfix visible-sm-block"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="title-footer"><span>Nossa Loja</span></div>
+            <ul class="footer-icon">
+              <li><span><i class="fa fa-map-marker"></i></span> Rua Candido Lopes, 205</li>
+              <li><span><i class="fa fa-phone"></i></span> +55 (41) 3223-0749</li>
+              <li><span><i class="fa fa-envelope"></i></span> <a href="mailto:cs@domain.tld">contato@elentes.com</a></li>
+            </ul>
+          </div>
+          <div class="clearfix visible-sm-block"></div>
+          <div class="col-md-6 col-sm-6">
+            <div class="title-footer"><span>Formas de Pagamento</span></div>
+            <p></p>
+            <img src="images/payment-1.png" alt="Payment-1">
+            <img src="images/payment-2.png" alt="Payment-2">
+            <img src="images/payment-3.png" alt="Payment-3">
+            <img src="images/payment-4.png" alt="Payment-4">
+            <img src="images/payment-5.png" alt="Payment-5">
+          </div>
+        </div>
+      </div>
+      <div class="text-center copyright">
+        Copyright &copy; 2017 ELentes Todos os direitos reservados
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <a href="#top" class="back-top text-center" onclick="$('body,html').animate({scrollTop:0},500); return false">
+      <i class="fa fa-angle-double-up"></i>
+    </a>
+
+    <div class="chooser chooser-hide">
+      <div class="chooser-toggle"><button class="btn btn-warning" type="button"><i class="fa fa-paint-brush bigger-130"></i></button></div>
+      <div class="chooser-content">
+        <label>Color</label>
+        <select name="color-chooser" id="color-chooser" class="form-control input-sm selectpicker">
+          <option value="indigo">Indigo</option>
+          <option value="red">Red</option>
+          <option value="teal">Teal</option>
+          <option value="brown">Brown</option>
+        </select>
+        <label class="m-t-1">Style</label>
+        <select name="style-chooser" id="style-chooser" class="form-control input-sm selectpicker">
+          <option value="flat">Flat</option>
+          <option value="rounded">Rounded</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <!-- Plugins -->
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap3-typeahead.js"></script>
+    <script src="js/bootstrap-toolkit.js"></script>
+    <script src="js/mimity.js"></script>
+  </body>
+</html>
