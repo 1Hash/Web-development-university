@@ -1,0 +1,84 @@
+﻿@model CarpoolingEL.CARROS
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+@if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "2")
+{
+
+<h3>Detalhes</h3>
+
+<div>
+    <hr />
+
+    @if (Session["msgeditc"] != null)
+    {
+        <div class="form-group">
+            <div class="alert alert-success alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>Sucesso!</strong> @Session["msgeditc"].ToString()
+                @{Session["msgeditc"] = null;}
+            </div>
+        </div>
+     }
+
+    <dl class="dl-horizontal">
+        <dt>
+            Carro:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modeloCar)
+        </dd>
+
+        <dt>
+            Placa:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.placaCar)
+        </dd>
+
+        <dt>
+            Cor:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.corCar)
+        </dd>
+
+        <dt>
+            Capacidade:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacidadeCar)
+        </dd>
+
+        <dt>
+            <br />
+        </dt>
+
+        <dd>
+            <br />
+        </dd>
+
+        <dt>
+            <a class="btn btn-primary" href="../Index">Voltar</a>
+        </dt>
+        <dd>
+            
+        </dd>
+    </dl>
+</div>
+
+}
+else if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "1")
+{
+    Response.Redirect("~/Passageiro");
+}
+else
+{
+    Response.Redirect("~/Home");
+}

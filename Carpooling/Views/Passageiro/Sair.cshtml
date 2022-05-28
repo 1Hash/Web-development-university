@@ -1,0 +1,50 @@
+﻿@model CarpoolingEL.AGENDA_USUARIOS
+
+@{
+    ViewBag.Title = "Sair da carona";
+}
+
+@if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "1")
+{
+
+<h2>Sair da carona:</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            ID:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AGENDA.idAge)
+        </dd>
+
+        <dt>
+            Nome:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIOS.nomeUsu)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>
+
+}
+else if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "2")
+{
+    Response.Redirect("~/Motorista");
+}
+else
+{
+    Response.Redirect("~/Home");
+}

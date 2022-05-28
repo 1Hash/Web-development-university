@@ -1,0 +1,156 @@
+﻿@model CarpoolingEL.USUARIOS
+
+@{
+    ViewBag.Title = "Configuracoes";
+}
+
+@if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "1")
+{
+
+<h3>Detalhes</h3>
+
+<div>
+    <hr />
+
+    @if (Session["msgedit"] != null)
+    {
+        <div class="form-group">
+            <div class="alert alert-success alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>Sucesso!</strong> @Session["msgedit"].ToString()
+                @{Session["msgedit"] = null;}
+            </div>
+        </div>
+                    }
+
+    <dl class="dl-horizontal">
+        <dt>
+            Nome:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomeUsu)
+        </dd>
+
+        <dt>
+            E-mail:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailUsu)
+        </dd>
+
+        <dt>
+            RG:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rgUsu)
+        </dd>
+
+        <dt>
+            Endereço:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endUsu)
+        </dd>
+
+        <dt>
+            Complemento:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compUsu)
+        </dd>
+
+        <dt>
+            CEP:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cepUsu)
+        </dd>
+
+        <dt>
+            Bairro
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bairroUsu)
+        </dd>
+
+        <dt>
+            Cidade:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cidadeUsu)
+        </dd>
+
+        <dt>
+            UF:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ufUsu)
+        </dd>
+
+        <dt>
+            Telefone:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telUsu)
+        </dd>
+
+        <dt>
+            Celular:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.celUsu)
+        </dd>
+
+        <dt>
+            Usuário:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuario)
+        </dd>
+
+        <dt>
+            Senha:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.senha)
+        </dd>
+
+        <dt>
+           <br />
+        </dt>
+
+        <dd>
+           <br />
+        </dd>
+
+        <dt>
+            <a class="btn btn-success" href="Editar">Editar</a>
+        </dt>
+        <dd>
+            <a class="btn btn-primary" href="Index">Voltar</a>
+        </dd>
+    </dl>
+</div>
+
+}
+else if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "2")
+{
+    Response.Redirect("~/Motorista");
+}
+else
+{
+    Response.Redirect("~/Home");
+}

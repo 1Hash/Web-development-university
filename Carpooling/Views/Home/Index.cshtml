@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+@if (Session["UserID"] != null)
+{
+    if (Session["UserTipo"].ToString() == "1")
+    {
+        Response.Redirect("~/Passageiro");
+    }
+    else if (Session["UserTipo"].ToString() == "2")
+    {
+        Response.Redirect("~/Motorista");
+    }
+}
+else
+{
+
+    <style>
+
+        .meio {
+            height: 100%;
+            vertical-align: middle;
+        }
+
+    </style>
+
+<div class="row">
+    <div class="col-md-12 meio" style="text-align: center;">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1>CARPOOLING EL</h1>
+        <p>
+            Desenvolvido por Everton e Letícia
+        </p>
+
+        <img src="Img/carpooling.jpg"/>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+</div>
+
+}

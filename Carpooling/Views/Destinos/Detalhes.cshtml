@@ -1,0 +1,88 @@
+﻿@model CarpoolingEL.DESTINOS
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+@if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "2")
+{
+
+<h3>Detalhes</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Endereço
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endDest)
+        </dd>
+
+        <dt>
+            Complemento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compDest)
+        </dd>
+
+        <dt>
+            CEP
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cepDest)
+        </dd>
+
+        <dt>
+            Bairro
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bairroDest)
+        </dd>
+
+        <dt>
+            Cidade
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cidadeDest)
+        </dd>
+
+        <dt>
+            UF
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ufDest)
+        </dd>
+
+        <dt>
+            <br />
+        </dt>
+
+        <dd>
+            <br />
+        </dd>
+
+        <dt>
+            <a class="btn btn-primary" href="../Index">Voltar</a>
+        </dt>
+        <dd>
+            
+        </dd>
+    </dl>
+</div>
+
+}
+else if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "1")
+{
+    Response.Redirect("~/Passageiro");
+}
+else
+{
+    Response.Redirect("~/Home");
+}

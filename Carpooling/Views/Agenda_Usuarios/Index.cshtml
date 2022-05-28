@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CarpoolingEL.AGENDA_USUARIOS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AGENDA.idAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIOS.nomeUsu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AGENDA.idAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIOS.nomeUsu)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idAgeUsu }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idAgeUsu }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idAgeUsu })
+        </td>
+    </tr>
+}
+
+</table>

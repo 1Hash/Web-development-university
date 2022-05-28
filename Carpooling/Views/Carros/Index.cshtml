@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CarpoolingEL.CARROS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "2")
+{
+
+    <style>
+
+        .alinhar tbody tr td {
+            vertical-align: middle;
+        }
+
+        .dir {
+            text-align: center;
+            border: 0px;
+        }
+
+    </style>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Registrar carro", "Create")
+</p>
+<table class="table table-bordered table-hover alinhar">
+    <thead>
+        <tr>
+            <th>
+                Carro
+            </th>
+            <th>
+                Placa
+            </th>
+            <th>
+                Cor
+            </th>
+            <th>
+                Capacidade
+            </th>
+            <th class="dir">Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.modeloCar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.placaCar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.corCar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.capacidadeCar)
+            </td>
+            <td class="dir">
+                <a href="@Url.Action("Editar", "Carros", new { id=item.idCar })" class="btn btn-success">Editar</a>
+                <a href="@Url.Action("Detalhes", "Carros", new { id=item.idCar })" class="btn btn-info">Detalhes</a>
+            </td>
+        </tr>
+}
+    </tbody>
+
+</table>
+
+}
+else if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "1")
+{
+    Response.Redirect("~/Passageiro");
+}
+else
+{
+    Response.Redirect("~/Home");
+}

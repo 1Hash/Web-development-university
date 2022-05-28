@@ -1,0 +1,90 @@
+﻿@model IEnumerable<CarpoolingEL.DESTINOS>
+
+@{
+    ViewBag.Title = "Destinos";
+}
+
+@if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "2")
+{
+
+    <style>
+        .alinhar tbody tr td {
+            vertical-align: middle;
+        }
+
+        .dir {
+            text-align: center;
+            border: 0px;
+        }
+    </style>
+
+<h3>Destinos</h3>
+
+<p>
+    @Html.ActionLink("Registrar novo destino", "Create")
+</p>
+<table class="table table-bordered table-hover alinhar">
+    <thead>
+        <tr>
+            <th>
+                Endereço
+            </th>
+            <th>
+                Complemento
+            </th>
+            <th>
+                CEP
+            </th>
+            <th>
+                Bairro
+            </th>
+            <th>
+                Cidade
+            </th>
+            <th>
+                UF
+            </th>
+            <th class="dir">Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.endDest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.compDest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cepDest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.bairroDest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cidadeDest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ufDest)
+                </td>
+                <td class="dir">
+                    <a href="@Url.Action("Editar", "Destinos", new { id=item.idDest })" class="btn btn-success">Editar</a>
+                    <a href="@Url.Action("Detalhes", "Destinos", new { id=item.idDest })" class="btn btn-info">Detalhes</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+}
+else if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "1")
+{
+    Response.Redirect("~/Passageiro");
+}
+else
+{
+    Response.Redirect("~/Home");
+}

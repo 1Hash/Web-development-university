@@ -1,0 +1,177 @@
+﻿@model IEnumerable<CarpoolingEL.AGENDA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "1")
+{
+
+    <style>
+
+        .cor {
+            color: red;
+        }
+
+        .tdbotao {
+            text-align: center;
+        }
+
+        .tbl tbody tr td {
+            vertical-align: middle;
+        }
+
+    </style>
+
+    <h2>Oi passageiro @Session["UserNome"].ToString()</h2>
+    <hr />
+    <br />
+    <h4><b>Caronas disponíveis</b></h4>
+    <table class="table table-bordered tbl table-hover">
+        <thead>
+            <tr>
+                <th>Data e hora</th>
+                <th>Carro</th>
+                <th>Capacidade</th>
+                <th>Destino</th>
+                <th>Motorista</th>
+                <th class="tdbotao">Opção</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            CarpoolingELEntities db = new CarpoolingELEntities();
+
+            int a = db.AGENDA_USUARIOS.Where(au => au.AGENDA.fkUsu == item.fkUsu).Count();
+            int i = (item.CARROS.capacidadeCar - a) - 1;
+
+            int v = Convert.ToInt32(Session["UserID"]);
+            var q = db.AGENDA_USUARIOS.Where(au => au.AGENDA.fkUsu == item.fkUsu && au.fkUsu == v).Count();
+            var q3 = db.AGENDA_USUARIOS.Where(au => au.AGENDA.fkUsu == item.fkUsu && au.fkUsu == v).FirstOrDefault();
+
+            var q2 = db.AGENDA_USUARIOS.Where(au => au.fkUsu == v).Count();
+            var q4 = db.AGENDA_USUARIOS.Where(au => au.fkUsu == v).FirstOrDefault();
+
+            <tbody>
+
+                @if (q > 0)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dhAge)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CARROS.modeloCar)
+                        </td>
+
+                        <td>
+                            @i.ToString()
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DESTINOS.endDest)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.USUARIOS.nomeUsu)
+                        </td>
+                        <td class="tdbotao">
+                            @Html.ActionLink("Sair da carona", "Sair", new { id = q4.idAgeUsu }, htmlAttributes: new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+                else if (i <= 0)
+                {
+
+                    <tr class="danger">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dhAge)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CARROS.modeloCar)
+                        </td>
+
+                        <td class="cor">
+                            @{String txt = "Lotado";}
+                    @txt
+                </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DESTINOS.endDest)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.USUARIOS.nomeUsu)
+                        </td>
+                        <td class="tdbotao">
+		                    @Html.ActionLink("Pegar carona", "Edit", new { id = q3.fkUsu }, htmlAttributes: new { @class = "btn btn-success disabled" })
+                        </td>
+                    </tr>
+                }
+                else if (q2 > 0)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dhAge)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CARROS.modeloCar)
+                        </td>
+
+                        <td>
+                            @i.ToString()
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DESTINOS.endDest)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.USUARIOS.nomeUsu)
+                        </td>
+                        <td class="tdbotao">
+                            @Html.ActionLink("Pegar carona", "Edit", new { id = q4.fkUsu }, htmlAttributes: new { @class = "btn btn-success disabled" })
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.dhAge)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CARROS.modeloCar)
+                        </td>
+
+                        <td>
+                            @i.ToString()
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DESTINOS.endDest)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.USUARIOS.nomeUsu)
+                        </td>
+                        <td class="tdbotao">
+
+                            
+
+                            @Html.ActionLink("Pegar carona", "Create", new { fkAge = item.idAge, fkUsu = v }, htmlAttributes: new { @class = "btn btn-success" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        }
+
+    </table>
+
+
+}
+else if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "2")
+{
+    Response.Redirect("~/Motorista");
+}
+else
+{
+    Response.Redirect("~/Home");
+}

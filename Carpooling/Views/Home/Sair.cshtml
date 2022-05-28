@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Sair";
+}
+
+@if (Session["UserID"] != null)
+{
+    Session["UserID"] = null;
+    Session["UserNome"] = null;
+    Session["UserTipo"] = null;
+
+    Response.Redirect("~/Home");
+}
+else
+{
+    Response.Redirect("~/Home");
+}
+

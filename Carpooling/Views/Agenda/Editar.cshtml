@@ -1,0 +1,70 @@
+﻿@model CarpoolingEL.AGENDA
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<style>
+    .sumir {
+        display: none;
+    }
+</style>
+
+@if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "2")
+{
+
+<h3>Editar agenda</h3>
+
+using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.idAge)
+
+        <div class="form-group">
+            <label class="control-label col-sm-2">Data e hora:</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dhAge, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.dhAge, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2">Carro:</label>
+            <div class="col-md-10">
+                @Html.DropDownList("fkCar", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.fkCar, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2">Destino:</label>
+            <div class="col-md-10">
+                @Html.DropDownList("fkDest", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.fkDest, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @Html.EditorFor(model => model.fkUsu, new { htmlAttributes = new { @class = "form-control sumir", @Value = Session["UserID"].ToString() } })
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-success" />
+                <a style="margin-left: 10px;" class="btn btn-primary" href="../Index">Voltar</a>
+            </div>
+        </div>
+    </div>
+}
+
+}
+else if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "1")
+{
+    Response.Redirect("~/Passageiro");
+}
+else
+{
+    Response.Redirect("~/Home");
+}

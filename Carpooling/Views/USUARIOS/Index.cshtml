@@ -1,0 +1,80 @@
+﻿@model IEnumerable<CarpoolingEL.USUARIOS>
+
+@{
+    ViewBag.Title = "Usuários";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Novo Registro", "Registrar")
+</p>
+<table class="table table-bordered table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Endereço
+            </th>
+            <th>
+                Complemento
+            </th>
+            <th>
+                Bairro
+            </th>
+            <th>
+                Cidade
+            </th>
+            <th>
+                UF
+            </th>
+            <th>
+                Celular
+            </th>
+            <th>
+                Tipo
+            </th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+
+@foreach (var item in Model)
+{
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeUsu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.endUsu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.compUsu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bairroUsu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cidadeUsu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ufUsu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.celUsu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIPO_USUARIO.idTipoUser)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id=item.idUsu }) |
+                @Html.ActionLink("Detalhes", "Details", new { id=item.idUsu }) |
+                @Html.ActionLink("Deletar", "Delete", new { id=item.idUsu })
+            </td>
+        </tr>
+    </tbody>
+}
+
+</table>

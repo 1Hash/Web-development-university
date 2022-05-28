@@ -1,0 +1,135 @@
+﻿@model CarpoolingEL.USUARIOS
+
+@{
+    ViewBag.Title = "Deletar";
+}
+
+<h2>Delete</h2>
+
+<h3>Você tem certeza que deseja deletar esse registro?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomeUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomeUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rgUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rgUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cepUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cepUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bairroUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bairroUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cidadeUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cidadeUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ufUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ufUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.celUsu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.celUsu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.senha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.senha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_USUARIO.idTipoUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_USUARIO.idTipoUser)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

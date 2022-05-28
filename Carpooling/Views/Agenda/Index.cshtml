@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CarpoolingEL.AGENDA>
+
+@{
+    ViewBag.Title = "Agenda";
+}
+
+@if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "2")
+{
+
+    <style>
+        .alinhar tbody tr td {
+            vertical-align: middle;
+        }
+
+        .dir {
+            text-align: center;
+            border: 0px;
+        }
+    </style>
+
+<h3>Agenda</h3>
+
+<p>
+    @Html.ActionLink("Registrar nova agenda", "Create")
+</p>
+<table class="table table-bordered table-hover alinhar">
+    <tr>
+        <th>
+            Data e hora
+        </th>
+        <th>
+            Carro
+        </th>
+        <th>
+            Endereço
+        </th>
+
+        <th class="dir">Opções</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dhAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CARROS.modeloCar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESTINOS.endDest)
+        </td>
+        <td class="dir">
+            <a href="@Url.Action("Editar", "Agenda", new { id=item.idAge })" class="btn btn-success">Editar</a>
+            <a href="@Url.Action("Detalhes", "Agenda", new { id=item.idAge })" class="btn btn-info">Detalhes</a>
+        </td>
+    </tr>
+}
+
+</table>
+
+}
+else if (Session["UserTipo"] != null && Session["UserTipo"].ToString() == "1")
+{
+    Response.Redirect("~/Passageiro");
+}
+else
+{
+    Response.Redirect("~/Home");
+}

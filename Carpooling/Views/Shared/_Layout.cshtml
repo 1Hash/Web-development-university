@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Carpooling EL</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+                @if (Session["UserTipo"] != null)
+                {
+                    if (Session["UserTipo"].ToString() == "1")
+                    {
+                        @Html.ActionLink("Carpooling EL", "Index", "Passageiro", new { area = "" }, new { @class = "navbar-brand" })
+                    }
+                    else if (Session["UserTipo"].ToString() == "2")
+                    {
+                        @Html.ActionLink("Carpooling EL", "Index", "Motorista", new { area = "" }, new { @class = "navbar-brand" })
+                    }
+                }
+                else
+                {
+                    @Html.ActionLink("Carpooling EL", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                }
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @if (Session["UserTipo"] != null)
+                    {
+                        if (Session["UserTipo"].ToString() == "1")
+                        {
+                            
+                        }
+                        else if (Session["UserTipo"].ToString() == "2")
+                        {
+                            <li>@Html.ActionLink("Carro", "Index", "Carros")</li>
+                            <li>@Html.ActionLink("Destinos", "Index", "Destinos")</li>
+                            <li>@Html.ActionLink("Agenda", "Index", "Agenda")</li>
+                        }
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Início", "Index", "Home")</li>
+                    }
+                </ul>
+                <ul class="nav navbar-nav" style="float: right;">
+                    @if (Session["UserTipo"] != null)
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                @Session["UserNome"]
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (Session["UserTipo"].ToString() == "1")
+                                {
+                                    <li><a href="../Passageiro/Configuracoes">Configurações</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="../Motorista/Configuracoes">Configurações</a></li>
+                                }
+                                <li><a href="../Home/Sair">Sair</a></li>
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Login", "login", "Home")</li>
+                    }
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
