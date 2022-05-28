@@ -1,0 +1,226 @@
+.ajustar{
+    margin: 0px;
+}
+
+.ajustar tbody tr td{
+    border: none; 
+    padding: 0px;
+    text-align: center;    
+}
+
+.alinharv tbody tr td{
+    vertical-align: middle;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.cursor:hover {
+    cursor: pointer;
+}
+
+.tambotao{
+    width: 220px !important;
+    text-align: center;
+}
+
+.botaoadmin {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.bg-vertical {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.botaoadmin div span{
+    /*border-style: solid;
+    border-width: 1px;*/
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 80px;
+    padding-left: 80px;
+
+    opacity: 1;
+    transition: background .25s ease-in-out;
+   -moz-transition: background .25s ease-in-out;
+   -webkit-transition: background .25s ease-in-out;
+}
+
+/*.botaoadmin div span:hover{
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+}*/
+
+.vmd {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+/*Bootstrap button outline override*/
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
+
+.bg-botaoadmin:hover {
+    background-color: #009688 !important;
+    border-color: #009688 !important;
+    color: #fff !important;
+}
+
+.bg-botao {
+    background-color: transparent !important;
+    color: inherit !important;
+    transition: all .2s !important;
+    color: #009688 !important;
+}
+
+.table-scroll {
+    max-height:300px;
+    overflow-y: scroll;
+    width: 97.5%;
+    
+}
+
+.nomarginbotton {
+    margin-bottom: 0;
+}
+
+.nopaddintop {
+    padding-top: 0;
+}
+
+.nopaddingleft {
+    padding-left: 0;
+}
+
+.nopaddingright {
+    padding-right: 0;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.floatright {
+    float: right;
+}
+
+/*.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  max-height: 230px;
+  overflow-y: auto;
+  width: 93%;
+}
+
+/*.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}*/
+
+[hidden] {
+  display: none !important;
+}
+
+.table-scroll-estoque {
+    max-height:600px;
+    overflow-y: scroll;
+    width: 100%;    
+}
+
+.scroll-avaliacoes {
+    max-height:400px;
+    overflow-y: scroll;
+    width: 100%;    
+}
+
+.hd-center thead tr th {
+    text-align: center;
+}
+
+.hd-center tbody tr td {
+    text-align: center;
+}
+
+.tr-hover tbody tr {
+    cursor: pointer !important;
+}
+
+.table-scroll-pedido {
+    max-height:500px;
+    overflow-y: scroll;
+    width: 100%;    
+}
+
+.error {
+    margin-bottom: 0 !important;
+    margin-top: 5px !important;
+    color: #a94442 !important;
+    font-style: italic !important;
+}
+
+.fafabotao {
+    border: 0;
+    padding: 0;
+    outline: 0;
+    background-color: #fff;
+}
+
+.fafabotaodanger {
+    border: 0;
+    padding: 0;
+    outline: 0;
+    background-color: #f2dede;
+}
+
+tr:hover td .fafabotaodanger {
+    background-color: #ebcccc;
+}
